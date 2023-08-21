@@ -1,0 +1,63 @@
+body {
+    background: rgb(116, 131, 97);
+    color: rgb(45, 45, 45);
+    padding: 10px;
+    font-family: arial;
+}
+#all-contents {
+  max-width: 800px;
+    margin: auto;
+}
+
+/* navigation menu */
+nav {
+    background: rgb(155, 128, 155);
+   margin: 0 auto;
+   margin-bottom: 20px
+    display: flex;
+    padding: 10px;
+}
+h1 {
+    display: flex;
+    align-items: center;
+    color: rgb(243, 255, 130);
+    flex: 1;
+    margin: 0;
+}
+#nav-ul {
+    list-style-image: none;
+}
+.nav-li {
+    display: inline-block;
+    padding: 0 10px;
+}
+a {
+    text-decoration: times;
+    color: rgb(255, 145, 72);
+}
+
+/* main container area beneath menu */
+main {
+    background: rgb(241, 241, 255);
+    display: flex;
+}
+.sidebar {
+    margin-right: 25px;
+    padding: 10px;
+}
+.sidebar-img {
+    width: 200px;
+}
+.content {
+    flex: 1;
+    padding: 15px;
+}
+
+/* portfolio styles */
+#interests {
+    border: 4px rgb(51, 102, 0);
+    padding: 8px;
+}
+h2, h3 {
+    margin: 0px;
+}
