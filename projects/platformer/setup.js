@@ -91,10 +91,10 @@ let halleImage;
 let animationDetails = {};
 
 var collectableList = {
-  database: { image: "images/collectables/database.png" },
+  icecream: { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0vDYmW-CNf3N9HsJ6i8dG_mKT8KiOiiNhm5Cci6rsrUbKZbnHN6Mq0oaL4dmRknd5aY:https://www.clipartmax.com/png/middle/279-2790542_cute-clipart-food-clipart-candy-clipart-ice-cream-sorvete-minus.png&usqp=CAU" },
   diamond: { image: "images/collectables/diamond-head.png" },
-  grace: { image: "images/collectables/grace-head.png" },
+  cottoncandy: { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeWmC-5fAkVECel5wH40No0oNfOu3R_eX0q0M8BLGUNxRdRjNCucLmeoV9hh39YlgxLE:https://assets.stickpng.com/images/59db6c013752880e93e16f09.png&usqp=CAU" },
   kennedi: { image: "images/collectables/kennedi-head.png" },
-  max: { image: "images/collectables/max-head.png" },
-  steve: { image: "images/collectables/steve-head.png" },
+  candy: { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR25j8s0TclkJHsOFUQHJTmNAGCvPJ4NkHI_g:https://clipartix.com/wp-content/uploads/2016/04/Candy-clip-art-at-clker-vector-clip-art-free.png&usqp=CAU" },
+  lolipop: { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48CpPARfkObo0TbkaS8Hi0GzzQlogQDAagmrzQJBMPWFW8TQS6x5h9gB3RwxVmDtDIC0:https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Candy-clipart.svg/768px-Candy-clipart.svg.png&usqp=CAU" },
 };
