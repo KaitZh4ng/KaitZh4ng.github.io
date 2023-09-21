@@ -6,9 +6,11 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: rgb(149, 17, 176);
+			width: 90px;
+			height: 90px;
+			background-image: url("slime.png");
+			background-size: 90px, 90px;
+			background-repeat: no-repeat;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -19,12 +21,16 @@
 		}
 		.board{
 			height: 100vh;
+			background-image: url("https://uploads-ssl.webflow.com/5350028b1443eefb41001752/5fa0e9f33e58e064ca195ac4_ChromeOS-12-p-2000.jpeg");
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		
  
  
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	
 
 </head>
 <body class="board">
@@ -46,7 +52,7 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 50);
+			setInterval(update, 20);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -70,8 +76,9 @@
 			// TODO 2 - Variable declarations 
 			var positionX = 0
 			var points = 0
-			var speed = 10
-			
+			var speed = 4
+			var randNum = Math.random() * boardWidth;
+
 
 			
 			/* 
@@ -90,7 +97,7 @@
 				if (positionX < 0) {
 					speed = -speed;
 				}
-		
+
 			};
 				
 		
@@ -104,14 +111,14 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = 0;
+				positionX = randNum;
 				points = points + 1
 				changeBoxText(points);
 			
 				if (speed > 0) {
-					speed + 3;
+					speed = speed + 1;
 				}else if (speed < 0) {
-					speed - 3;
+					speed = speed - 1;
 				}
 			};
 		})();
