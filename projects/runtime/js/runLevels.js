@@ -80,23 +80,25 @@ var runLevels = function (window) {
 
     function createMarker(x, y) {
       var marker = game.createGameItem("marker", 25);
-      marker.x = x;
-      marker.y = groundY - y;
-      marker.velocityX = -.8;
-      marker.rotationalVelocity = 0;
-      game.addGameItem(marker);
       var yellowCircle = draw.circle(50, "yellow", 12, "blue")
       yellowCircle.x = 0;
       yellowCircle.y = 0;
       marker.addChild(yellowCircle);
-      marker.onPlayerCollision = function() {startLevel()};
-      marker.onProjectileCollision = function() {startLevel()};
+      marker.x = x;
+      marker.y = groundY - y;
+      marker.velocityX = -.8;
+      marker.rotationalVelocity = 0;
+
+
+      marker.onPlayerCollision = function () { startLevel() };
+      marker.onProjectileCollision = function () { startLevel() };
+      game.addGameItem(marker);
     }
     // createMarker(1300, 50);
     function startLevel() {
       // TODO 13 goes below here
-      var level = levelData[currentLevel]   
-      var levelObjects = level.gameItems   
+      var level = levelData[currentLevel];
+      var levelObjects = level.gameItems;
       for (var i = 0; i < levelObjects.length; i++) {
         if (levelObjects[i].type === "sawblade") {
           createSawBlade((levelObjects[i].x), (levelObjects[i].y))
@@ -107,18 +109,18 @@ var runLevels = function (window) {
         } else if (levelObjects[i].type === "marker") {
           createMarker((levelObjects[i].x), (levelObjects[i].y))
         }
+      }
 
-
-        //////////////////////////////////////////////
-        // DO NOT EDIT CODE BELOW HERE
-        //////////////////////////////////////////////
-        if (++currentLevel === levelData.length) {
-          startLevel = () => {
-            console.log("Congratulations!");
-          };
-        }
+      //////////////////////////////////////////////
+      // DO NOT EDIT CODE BELOW HERE
+      //////////////////////////////////////////////
+      if (++currentLevel === levelData.length) {
+        startLevel = () => {
+          console.log("Congratulations!");
+        };
       }
     }
+
     startLevel();
   };
 };
